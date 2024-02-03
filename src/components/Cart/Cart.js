@@ -9,7 +9,7 @@ const Cart = (props) => {
   return (
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
-      <ul>
+      {cartItems && <ul>
         {cartItems.map((item) => (
           <CartItem
             key={item.id}
@@ -22,7 +22,7 @@ const Cart = (props) => {
             }}
           />
         ))}
-      </ul>
+      </ul>}
     </Card>
   );
 };
